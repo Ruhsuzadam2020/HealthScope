@@ -30,10 +30,11 @@ export default function AIModelHub() {
 
       {/* MODEL METRİKLERİ */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <ModelStat label="Aktif Model" value="BERTurk" subtext="Medical-Adapted BERT" icon={Brain} color="blue" />
-        <ModelStat label="İşlemci" value="RTX 4060" subtext="8GB GDDR6 VRAM" icon={Cpu} color="amber" />
-        <ModelStat label="Gecikme (Lat)" value="142ms" subtext="Avg Inference Time" icon={Zap} color="emerald" />
-        <ModelStat label="Eğitim Seti" value="100K+" subtext="Tokenized Medical-QA" icon={Database} color="purple" />
+        <ModelStat label="Aktif Model" value="bert-base-turkish-cased" subtext="Medical-Adapted BERT" icon={Brain} color="blue" />
+        <ModelStat label="Dataset" value="1.01M+ Satır" subtext="Medical-Adapted BERT_RUHADAM" icon={Brain} color="blue" />
+        <ModelStat label="İşlemci" value="GB GDDR6 - Ada Lovelace" icon={Cpu} color="amber" />
+        <ModelStat label="Hassasiyet" value="FP16 Mixed Precision"  icon={Zap} color="emerald" />
+        <ModelStat label="Eğitim Seti" value="berturk_medical_full_training" subtext="Tokenized Medical-QA" icon={Database} color="purple" />
       </div>
 
       {/* MODEL DETAYLARI VE LOGLAR */}
