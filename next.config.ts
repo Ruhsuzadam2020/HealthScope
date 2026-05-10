@@ -1,8 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    allowedDevOrigins: ['192.168.1.100:3000', 'localhost:3000'],
-  },
-}
+import type { NextConfig } from "next";
 
-module.exports = nextConfig
+const nextConfig: NextConfig = {
+  output: 'export', // GitHub Pages statik site istediği için bu şart
+  basePath: '/HealthScope',
+  images: {
+    unoptimized: true, // Statik exportta resim optimizasyonu çalışmaz
+  },
+};
+
+export default nextConfig;
