@@ -1,0 +1,49 @@
+@import "tailwindcss"; /* Eski 3 satır yerine sadece bu yeterli olabilir */
+
+/* Eğer üstteki çalışmazsa eski usul devam et ama paket yüklendiği için hata kalkacaktır */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --background: #030712; /* Çok koyu gri/siyah */
+  --foreground: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #030712;
+    --foreground: #f1f5f9;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: "rlig" 1, "calt" 1; /* Font kalitesi için */
+}
+
+/* Modern Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b; /* slate-800 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; /* slate-700 */
+}
+/* globals.css içindeki .text-gradient kısmını bununla değiştir */
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #cbd5e1, #64748b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
